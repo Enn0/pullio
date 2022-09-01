@@ -191,12 +191,12 @@ for i in "${!containers[@]}"; do
             fi
             echo "$container_name: Updating container..."
             if compose_up_wrapper "$docker_compose_workdir" "${docker_compose_service}"; then
-                status="I just updated myself.\nFeeling brand spanking new again!"
+                status="$container_name just updated itself.\nFeeling brand spanking new again!"
                 status_generic="update_success"
                 color=3066993
             else
                 echo "$container_name: Updating container failed!"
-                status="I tried to update myself.\nIt didn't work out, I might need some help."
+                status="$container_name tried to update itself.\nIt didn't work out, It might need some help."
                 status_generic="update_failure"
                 color=15158332
             fi
